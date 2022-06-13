@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const articleRouter = require('./routes/articles')
-const mongoose = require('mongoose')
+const articleRouter = require('./routes/articles');
+const userAuthRouter = require('./routes/user_auth');
+const mongoose = require('mongoose');
 const Article = require('./models/article');
 const methodOverride = require('method-override');
 
@@ -15,8 +16,10 @@ app.get('/', async function(req, res){
     res.render('articles/index' , {articles: articles});
 });
 
+
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 app.use('/articles', articleRouter);
+app.use('/user_auth', userAuthRouter);
 
 app.listen(8080);
