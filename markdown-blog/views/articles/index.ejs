@@ -9,9 +9,15 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
+    <h1 class="mb-4"> Blog Articles </h1>
 
+    <a href="/user_auth/signup" class="btn btn-success">sign up</a>
+    <a href="user_auth/login" class="btn btn-success">log in</a>
+
+    <div class="card mt-4">
+      <a href="/articles/new" class="btn btn-success">New Article</a>
+    </div>
+    
     <% articles.forEach(article => { %>
       <div class="card mt-4">
         <div class="card-body">
