@@ -10,9 +10,8 @@
 <body>
   <div class="container">
     <h1 class="mb-4"> Blog Articles </h1>
-
-    <a href="/user_auth/signup" class="btn btn-success">sign up</a>
-    <a href="/user_auth/login" class="btn btn-success">log in</a>
+    <h4 class="card-title">welcome <%= user.name%></h4>
+    <a href="/user_auth/logout" class="btn btn-success">log out</a>
 
     <div class="card mt-4">
       <a href="/articles/new" class="btn btn-success">New Article</a>
